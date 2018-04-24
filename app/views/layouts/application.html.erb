@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rainforest</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
+  </head>
+
+
+
+  <body class="container">
+    <header class="header">
+      <h1 class="logo"> <a href="/products"> Rainforest</a></h1>
+          <% if current_user %>
+      <%= link_to 'Logout', sessions_path, method: :delete %>
+    <% else %>
+      <p> <%= link_to 'New Account', new_users_path %> |
+      <%= link_to 'Login', new_sessions_path %> </p>
+    <% end %>
+    </p>
+      <nav class="navbar">
+        <a><%= link_to 'Home', root_path %></a>
+        <a><%= link_to 'Products', products_path %></a>
+        <a><%= link_to 'Add New Product', new_product_path %></a>
+      </nav>
+    </header>
+
+    <section class="wrapper">
+
+      <%= yield %>
+
+    </section>
+
+    <footer>
+      <h5> Developed by Hasan | Karen | Gustavo  </h5>
+    </footer>
+  </body>
+</html>

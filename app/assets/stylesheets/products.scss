@@ -1,0 +1,199 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+// header
+.logo {
+  a {
+  color: #e4c43c;
+  font-family: 'Armata', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  grid-area: logo;
+  padding: 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  grid-area: navbar;
+  justify-self: end;
+  align-self: center;
+  padding: 1.5em;
+}
+
+.navbar {
+   a {
+    color: #ccc;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  a:hover {
+    color: #aaa;
+    transition: 0.5s;
+  }
+}
+
+.header {
+  background: #006c0b;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "logo navbar"
+}
+
+// container
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20% 70% 10%;
+  grid-template-areas:
+  "header"
+  "wrapper"
+  "footer"
+}
+
+// middle sections
+.index {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: .25em;
+  padding: 2em;
+  // grid-template-areas:
+    // "single single"
+}
+
+.show {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: .25em;
+  padding: 2em;
+  .links {
+    position: relative;
+    left: 40%;
+  }
+}
+
+.new, .edit {
+  margin: 20px;
+  text-align: center;
+  h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+}
+
+// validation
+
+#error_explanation {
+  h2 {
+    font-weight: 300;
+    margin: 20px 0 0 0;
+  }
+  ul {
+    color: #7d0000;
+    font-size: 1em;
+    list-style: none;
+    margin: 0;
+  }
+}
+
+// product form
+
+.form {
+  input {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    width: 200px;
+  }
+  // input:nth-last-child(1) {
+    // background: #333;
+  // }
+  h4 {
+    font-weight: 200;
+    margin: 0;
+  }
+  h4:nth-child(even) {
+    margin: 0.5em 0;
+  }
+  h4:nth-last-child(1) {
+    input {
+      background: #888;
+      color: #eee;
+    }
+  }
+}
+
+
+// product individual
+
+.text {
+  padding: 10px;
+  a {
+    color: #222;
+    font-size: 3em;
+    margin: 20px;
+  }
+  .description {
+    font-weight: 300;
+    margin: 20px;
+  }
+}
+
+// review
+
+.review {
+  padding: 0 1.5em 1.5em 1.5em;
+  .label {
+    font-size: 1.5em;
+    font-weight: 200;
+    margin: 0 20px;
+  }
+  ul {
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+    .review-description, .time {
+      font-weight: 200;
+      margin: 0;
+    }
+    .time {
+      font-size: 0.75em;
+    }
+    .links {
+      font-size: 0.65em;
+    }
+  }
+  .new_review {
+    margin: 0 20px;
+  }
+}
+
+// footer
+
+footer {
+  background: #ccc;
+  color: #fff;
+  grid-area: footer;
+  text-align: center;
+}
